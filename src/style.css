@@ -1,22 +1,5 @@
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-}
-
-html,
-body {
-  padding: 0;
-  margin: 0;
-  height: 100%;
-  width: 100%;
-}
-
-body {
-  font-family: 'Helvetica Neue Light', sans-serif;
-  display: table;
-  background-color: #fafafa;
-}
+@import 'styles/base.css';
+@import 'styles/typography.css';
 
 p {
   line-height: 1.5;
@@ -27,6 +10,12 @@ p {
 a {
   text-decoration: none;
   font-weight: 200;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 400;
+  margin-top: 0;
+  font-family: 'Helvetica Neue', sans-serif;
 }
 
 .app-header {
@@ -58,7 +47,7 @@ a {
   text-decoration: none;
   color: #aaa;
   margin: 0 1rem;
-  font-weight: 200;
+  font-weight: 300;
   text-transform: uppercase;
   font-size: 10pt;
   letter-spacing: 4px;
@@ -77,6 +66,10 @@ a {
   text-align: center;
 }
 
+.app-header .app-header-link.app-logo:hover {
+  color: steelblue;
+}
+
 .app-container {
   position: relative;
   width: 100%;
@@ -84,4 +77,60 @@ a {
   vertical-align: top;
   display: table;
   padding-top: 70px;
+}
+
+.main-wrapper {
+  margin: 0 auto;
+  padding: 0 .5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.generator-container {
+  width: 100%;
+  padding: 2rem;
+  background: linear-gradient(to left, #24c6dc , #514a9d);
+  border-radius: 3px;
+}
+
+.generator-container h1 {
+  color: #fff;
+  font-weight: 100 !important;
+}
+
+main,
+aside {
+  position: relative;
+  padding: .5rem 0;
+  width: 100%;
+}
+
+main {
+  flex: 2;
+}
+
+aside {
+  flex: 1;
+}
+
+@media (min-width: 200px) {
+  .main-wrapper {
+    max-width: 780px;
+  }
+}
+
+@media (min-width: 1000px) {
+  main {
+    padding: 1rem 1rem 1rem 0;
+  }
+
+  aside {
+    padding: 1rem 0;
+  }
+
+  .main-wrapper {
+    max-width: 1000px;
+    padding: 0 1rem;
+    flex-direction: row;
+  }
 }
