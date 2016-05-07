@@ -1,22 +1,31 @@
 import React, { Component } from 'react'
+import Select from './Select'
 
 class GeneratorContainer extends Component {
+  getLanguageOptions () {
+    return [
+      { key: 'php', value: 'PHP' },
+      { key: 'js', value: 'JavaScript' },
+      { key: 'css', value: 'CSS' },
+      { key: 'html', value: 'HTML' }
+    ]
+  }
+
+  getTypeOptions () {
+    return [
+      { key: 'controller', value: 'Controller' },
+      { key: 'model', value: 'Model' },
+      { key: 'view', value: 'View' },
+      { key: 'service', value: 'Service' }
+    ]
+  }
+
   render () {
     return (
       <div className='generator-container'>
         <h1>Let's generate some code!</h1>
-        <select>
-          <option value='php'>PHP</option>
-          <option value='js'>JavaScript</option>
-          <option value='css'>CSS</option>
-          <option value='html'>HTML</option>
-        </select>
-        <select>
-          <option value='controller'>Controller</option>
-          <option value='model'>Model</option>
-          <option value='view'>View</option>
-          <option value='service'>Service</option>
-        </select>
+        <Select options={this.getLanguageOptions()} />
+        <Select options={this.getTypeOptions()} />
         <button type='submit'>Continue</button>
       </div>
     )
