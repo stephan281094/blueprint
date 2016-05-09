@@ -7,7 +7,7 @@ import App from '../common/containers/App'
 
 const initialState = window.__INITIAL_STATE__
 const store = configureStore(initialState)
-const rootElement = document.getElementById('app')
+const rootElement = document.getElementById('root')
 
 render(
   <Provider store={store}>

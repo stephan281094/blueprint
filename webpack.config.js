@@ -1,5 +1,6 @@
 var path = require('path')
 var webpack = require('webpack')
+var autoprefixer = require('autoprefixer')
 
 module.exports = {
   devtool: 'inline-source-map',
@@ -26,7 +27,22 @@ module.exports = {
         query: {
           presets: [ 'react-hmre' ]
         }
+      },
+      { test: /\.css$/,
+        loader: 'style-loader!style-loader!css-loader!postcss-loader'
+      },
+      { test: /\.png$/,
+        loader: 'url-loader?limit=100000'
+      },
+      { test: /\.jpg$/,
+        loader: 'file-loader'
       }
     ]
+  },
+  resolve: {
+    modulesDirectories: ['src', 'node_modules']
+  },
+  postcss: function () {
+    return [autoprefixer]
   }
 }
