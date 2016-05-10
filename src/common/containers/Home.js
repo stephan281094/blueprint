@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import GeneratorContainer from '../components/GeneratorContainer'
+import Popular from '../components/Popular'
 
 class Home extends Component {
   render () {
@@ -10,6 +11,7 @@ class Home extends Component {
       <div className='main-wrapper'>
         <main>
           <GeneratorContainer languages={languages} types={types} />
+          <Popular />
         </main>
         <aside>
 

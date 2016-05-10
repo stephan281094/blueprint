@@ -113,6 +113,14 @@ aside {
   flex: 1;
 }
 
+section {
+  font-size: 1rem;
+}
+
+main > section + section {
+  margin-top: 1rem;
+}
+
 @media (min-width: 200px) {
   .main-wrapper {
     max-width: 780px;
