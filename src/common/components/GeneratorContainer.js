@@ -2,14 +2,6 @@ import React, { Component } from 'react'
 import Select from './Select'
 
 class GeneratorContainer extends Component {
-  getLanguageOptions () {
-    return [
-      { key: 'php', value: 'PHP' },
-      { key: 'js', value: 'JavaScript' },
-      { key: 'html', value: 'HTML' }
-    ]
-  }
-
   getTypeOptions () {
     return [
       { key: 'model', value: 'Model' },
@@ -19,10 +11,12 @@ class GeneratorContainer extends Component {
   }
 
   render () {
+    const { languages } = this.props
+
     return (
       <div className='generator-container'>
         <h1>Let's generate some code!</h1>
-        <Select options={this.getLanguageOptions()} />
+        <Select options={languages} />
         <Select options={this.getTypeOptions()} />
         <button type='submit'>Continue</button>
       </div>

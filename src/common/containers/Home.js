@@ -21,4 +21,10 @@ class Home extends Component {
   }
 }
 
-export default Home
+const mapStateToProps = (state) => {
+  return {
+    languages: state.languages
+  }
+}
+
+export default connect(mapStateToProps)(Home)
