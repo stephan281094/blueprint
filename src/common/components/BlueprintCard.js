@@ -6,7 +6,11 @@ class BlueprintCard extends Component {
 
     return (
       <div className='blueprint-card'>
-        <h2>{blueprint.title} ({blueprint.language})</h2>
+        <a href={'/' + blueprint.language} className='language'>
+          {blueprint.language}
+        </a>
+        <a href={'/' + blueprint.language + '/' + blueprint.type}><h2>{blueprint.title}</h2></a>
+        <pre className='snippet'>{blueprint.snippet}</pre>
       </div>
     )
   }
