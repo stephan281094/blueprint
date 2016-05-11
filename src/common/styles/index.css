@@ -117,6 +117,10 @@ section {
   font-size: 1rem;
 }
 
+.popular-container {
+  margin-top: 1rem;
+}
+
 main > section + section {
   margin-top: 1rem;
 }
