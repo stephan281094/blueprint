@@ -127,6 +127,8 @@ section {
   background-color: #fff;
   max-height: 175px;
   overflow: hidden;
+  cursor: pointer;
+  display: block;
 }
 
 .blueprint-card:after {
@@ -146,7 +148,12 @@ section {
 }
 
 .blueprint-card h2 {
+  color: #444;
   margin: .5rem;
+}
+
+.blueprint-card:hover {
+  box-shadow: 0 0 1px 1px #24c6dc;
 }
 
 .blueprint-card .language {
@@ -158,13 +165,10 @@ section {
   font-size: 9pt;
 }
 
-.blueprint-card .language:hover {
-  color: #000;
-}
-
 .blueprint-card .snippet {
   margin: 0;
   padding: 0 .5rem;
+  color: #888;
 }
 
 @media (min-width: 200px) {

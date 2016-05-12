@@ -5,13 +5,12 @@ class BlueprintCard extends Component {
     const { blueprint } = this.props
 
     return (
-      <div className='blueprint-card'>
-        <a href={'/' + blueprint.language} className='language'>
-          {blueprint.language}
-        </a>
-        <a href={'/' + blueprint.language + '/' + blueprint.type}><h2>{blueprint.title}</h2></a>
+      <a href={'/' + blueprint.language + '/' + blueprint.type}
+        className='blueprint-card'>
+        <span className='language'>{blueprint.language}</span>
+        <h2>{blueprint.title}</h2>
         <pre className='snippet'>{blueprint.snippet}</pre>
-      </div>
+      </a>
     )
   }
 }
