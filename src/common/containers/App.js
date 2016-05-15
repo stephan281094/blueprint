@@ -1,10 +1,9 @@
 import React, { Component } from 'react'
 import Header from '../components/Header'
-import Home from './Home'
 if (typeof window !== 'undefined') require('../styles/index.css')
 
 class App extends Component {
-  render() {
+  render () {
     return (
       <div className='app-container'>
         <Header />

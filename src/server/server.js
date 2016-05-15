@@ -1,6 +1,4 @@
-import path from 'path'
 import Express from 'express'
-import qs from 'qs'
 
 import webpack from 'webpack'
 import webpackDevMiddleware from 'webpack-dev-middleware'
@@ -25,7 +23,7 @@ app.use(webpackHotMiddleware(compiler))
 // This is fired every time the server side receives a request
 app.use(handleRender)
 
-function handleRender(req, res) {
+function handleRender (req, res) {
   // Compile an initial state
   const initialState = {}
 
@@ -46,7 +44,7 @@ function handleRender(req, res) {
   res.send(renderFullPage(html, finalState))
 }
 
-function renderFullPage(html, initialState) {
+function renderFullPage (html, initialState) {
   return `
     <!doctype html>
     <html>
