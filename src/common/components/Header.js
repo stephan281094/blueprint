@@ -1,13 +1,14 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router'
 
 class Header extends Component {
   render () {
     return (
       <header className='app-header'>
         <div className='app-header-left'></div>
-        <a className='app-header-link app-logo' href='/'>Blueprint</a>
+        <Link className='app-header-link app-logo' to='/'>Blueprint</Link>
         <div className='app-header-right'>
-          <a className='app-header-link' href='/profile'>You</a>
+          <Link className='app-header-link' to='/profile'>You</Link>
         </div>
       </header>
     )
