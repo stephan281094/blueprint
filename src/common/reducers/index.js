@@ -1,9 +1,9 @@
 import { combineReducers } from 'redux'
-import languages from './languages'
+import language from './language'
 import types from './types'
 
 const rootReducer = combineReducers({
-  languages,
+  language,
   types
 })
 

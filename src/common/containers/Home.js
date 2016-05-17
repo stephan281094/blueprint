@@ -23,7 +23,7 @@ class Home extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    languages: state.languages,
+    languages: state.language.list,
     types: state.types
   }
 }

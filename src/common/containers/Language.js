@@ -1,14 +1,45 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
+
+import { getLanguagesByKey } from '../reducers/language'
 
 class Language extends Component {
+  componentDidMount () {
+    this.props.getLanguagesByKey('php')
+  }
+
   render () {
-    return (
-      <div>
-        <h1>Language Page</h1>
-        <p>Showcasing all blueprints created for a specific language</p>
-      </div>
-    )
+    const { language } = this.props
+
+    if (language) {
+      return (
+        <div>
+          <h1>Language: {language.value}</h1>
+          <p>Showcasing all blueprints created for {language.value}</p>
+        </div>
+      )
+    } else {
+      return (
+        <div>
+          <h1>Language Page</h1>
+          <p>Showcasing all blueprints created for a specific language</p>
+        </div>
+      )
+    }
   }
 }
 
-export default Language
+const mapDispatchToProps = (dispatch) => {
+  return bindActionCreators({
+    getLanguagesByKey
+  }, dispatch)
+}
+
+const mapStateToProps = (state) => {
+  return {
+    language: state.language.current
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Language)
