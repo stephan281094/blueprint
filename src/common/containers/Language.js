@@ -6,7 +6,9 @@ import { getLanguagesByKey } from '../reducers/language'
 
 class Language extends Component {
   componentDidMount () {
-    this.props.getLanguagesByKey('php')
+    const { getLanguagesByKey, params } = this.props
+
+    getLanguagesByKey(params.language)
   }
 
   render () {
