@@ -111,24 +111,33 @@ h1, h2, h3, h4, h5, h6 {
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
 }
 
 .generator-container .generator-title {
+  flex: 1;
   float: left;
   margin: 0;
   color: rgba(0, 0, 0, .85);
 }
 
+.generator-container .generator-title h1 {
+  font-weight: 300;
+}
+
 .generator-settings {
-  flex: 1;
   display: flex;
   justify-content: flex-end;
   flex-direction: row;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
+}
+
+.generator-settings select,
+.generator-settings button {
+  flex: 1;
 }
 
 main,
@@ -215,5 +224,14 @@ section {
     max-width: 1000px;
     padding: 0 1rem;
     flex-direction: row;
+  }
+
+  .generator-container .container {
+    flex-direction: row;
+  }
+
+  select,
+  button {
+    min-width: 150px;
   }
 }

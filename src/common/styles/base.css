@@ -25,10 +25,9 @@ button {
   display: block;
   padding: .75rem 1.5rem;
   margin: 0 .5rem;
-  min-width: 150px;
   cursor: pointer;
-  transition: .2s;
-  border: 2px solid #00cdaa;
+  transition: color .2s, background-color .2s, border-color .2s;
+  border: 2px solid #4682b4;
   border-radius: 5px;
   background-color: transparent;
   text-transform: uppercase;
@@ -40,29 +39,33 @@ button {
   user-select: none;
 }
 
+option:selected {
+  color: #c00 !important;
+}
+
 select {
   background-color: transparent;
-  color: #00cdaa;;
+  color: #4682b4;
 }
 
 select:hover,
 select:focus {
-  border-color: #22efcc;
-  color: #22efcc;
+  border-color: #68a4d6;
+  color: #68a4d6;
 }
 
 button {
-  background-color: #00cdaa;
+  background-color: #4682b4;
   color: #fff;
 }
 
 button:hover,
 button:focus {
-  background-color: #22efcc;
-  border-color: #22efcc;
+  background-color: #68a4d6;
+  border-color: #68a4d6;
 }
 
 button:active {
-  background-color: #00ab88;
-  border-color: #00ab88;
+  background-color: #246092;
+  border-color: #246092;
 }
