@@ -36,14 +36,16 @@ class Popular extends Component {
   render () {
     return (
       <div className='popular-container'>
-        <h1>Recently used blueprints</h1>
-        {blueprints.map((b) => <BlueprintCard blueprint={b} key={b.id} />)}
-        {blueprints.map((b) => <BlueprintCard blueprint={b} key={b.id} />)}
-        {blueprints.map((b) => <BlueprintCard blueprint={b} key={b.id} />)}
-        {blueprints.map((b) => <BlueprintCard blueprint={b} key={b.id} />)}
-        {blueprints.map((b) => <BlueprintCard blueprint={b} key={b.id} />)}
-        {blueprints.map((b) => <BlueprintCard blueprint={b} key={b.id} />)}
-        {blueprints.map((b) => <BlueprintCard blueprint={b} key={b.id} />)}
+        <div className='container'>
+          <h1>Recently used blueprints</h1>
+          {blueprints.map((b) => <BlueprintCard blueprint={b} key={b.id} />)}
+          {blueprints.map((b) => <BlueprintCard blueprint={b} key={b.id} />)}
+          {blueprints.map((b) => <BlueprintCard blueprint={b} key={b.id} />)}
+          {blueprints.map((b) => <BlueprintCard blueprint={b} key={b.id} />)}
+          {blueprints.map((b) => <BlueprintCard blueprint={b} key={b.id} />)}
+          {blueprints.map((b) => <BlueprintCard blueprint={b} key={b.id} />)}
+          {blueprints.map((b) => <BlueprintCard blueprint={b} key={b.id} />)}
+        </div>
       </div>
     )
   }

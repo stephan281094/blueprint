@@ -8,15 +8,10 @@ class Home extends Component {
     const { languages, types } = this.props
 
     return (
-      <div className='main-wrapper'>
-        <main>
-          <GeneratorContainer languages={languages} types={types} />
-          <Popular />
-        </main>
-        <aside>
-
-        </aside>
-      </div>
+      <main>
+        <GeneratorContainer languages={languages} types={types} />
+        <Popular />
+      </main>
     )
   }
 }

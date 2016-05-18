@@ -7,7 +7,7 @@ class Select extends Component {
     })
 
     return (
-      <select className='select'>
+      <select>
         {options}
       </select>
     )

@@ -7,10 +7,16 @@ class GeneratorContainer extends Component {
 
     return (
       <div className='generator-container'>
-        <h1>Let's generate some code!</h1>
-        <Select options={languages} />
-        <Select options={types} />
-        <button type='submit'>Continue</button>
+        <div className='container'>
+          <div className='generator-title'>
+            <h1>Let's generate some code!</h1>
+          </div>
+          <div className='generator-settings'>
+            <Select options={languages} />
+            <Select options={types} />
+            <button>Continue</button>
+          </div>
+        </div>
       </div>
     )
   }

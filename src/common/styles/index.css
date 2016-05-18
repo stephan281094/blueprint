@@ -31,6 +31,10 @@ h1, h2, h3, h4, h5, h6 {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
 }
 
 .app-header-left,
@@ -79,6 +83,17 @@ h1, h2, h3, h4, h5, h6 {
   padding-top: 70px;
 }
 
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.container:after {
+  content: '';
+  clear: both;
+  display: block;
+}
+
 .main-wrapper {
   margin: 0 auto;
   padding: 0 .5rem;
@@ -87,21 +102,38 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .generator-container {
-  width: 100%;
-  padding: 2rem;
-  background: linear-gradient(to left, #24c6dc , #514a9d);
-  border-radius: 3px;
+  padding: 4rem 2rem;
+  background-color: #fff;
+  box-shadow: inset 0 -1px 0 0 #fafafa;
 }
 
-.generator-container h1 {
-  color: #fff;
-  font-weight: 100 !important;
+.generator-container .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.generator-container .generator-title {
+  float: left;
+  margin: 0;
+  color: rgba(0, 0, 0, .85);
+}
+
+.generator-settings {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row;
+  flex-wrap: nowrap;
 }
 
 main,
 aside {
   position: relative;
-  padding: .5rem 0;
   width: 100%;
 }
 
@@ -118,7 +150,8 @@ section {
 }
 
 .popular-container {
-  margin-top: 1rem;
+  background-color: #fff;
+  padding-top: 1rem;
 }
 
 .blueprint-card {
@@ -178,14 +211,6 @@ section {
 }
 
 @media (min-width: 1000px) {
-  main {
-    padding: 1rem 1rem 1rem 0;
-  }
-
-  aside {
-    padding: 1rem 0;
-  }
-
   .main-wrapper {
     max-width: 1000px;
     padding: 0 1rem;
