@@ -5,6 +5,7 @@ import App from './containers/App'
 import Home from './containers/Home'
 import Language from './containers/Language'
 import LanguageFiltered from './containers/LanguageFiltered'
+import GenerateBlueprint from './containers/GenerateBlueprint'
 import NotFound from './containers/NotFound'
 
 const routes = (
@@ -12,6 +13,7 @@ const routes = (
     <IndexRoute component={Home} />
     <Route path=':language' component={Language} />
     <Route path=':language/:type' component={LanguageFiltered} />
+    <Route path=':language/:type/generate' component={GenerateBlueprint} />
     <Route path='*' component={NotFound} />
   </Route>
 )
