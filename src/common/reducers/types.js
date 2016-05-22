@@ -10,11 +10,15 @@ export function setTypeOption (key) {
 }
 
 // Initial State
-const initialState = [
-  { key: 'model', value: 'Model' },
-  { key: 'view', value: 'View' },
-  { key: 'controller', value: 'Controller' }
-]
+const initialState = {
+  selected: null,
+  current: null,
+  list: [
+    { key: 'model', value: 'Model' },
+    { key: 'view', value: 'View' },
+    { key: 'controller', value: 'Controller' }
+  ]
+}
 
 // Reducers
 const typeReducer = (state = initialState, action) => {

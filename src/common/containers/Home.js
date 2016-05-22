@@ -40,7 +40,7 @@ class Home extends Component {
 const mapStateToProps = (state) => {
   return {
     languages: state.language.list,
-    types: state.types
+    types: state.types.list
   }
 }
 
