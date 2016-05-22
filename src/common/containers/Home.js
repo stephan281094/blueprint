@@ -28,7 +28,7 @@ class Home extends Component {
         <GeneratorContainer
           languages={languages}
           types={types}
-          handleSubmit={this.handleSubmit}
+          handleSubmit={this.handleSubmit.bind(this)}
           setLanguageOption={this.setLanguageOption.bind(this)}
           setTypeOption={this.setTypeOption.bind(this)} />
         <Popular />
@@ -39,8 +39,8 @@ class Home extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    languages: state.languages.list,
-    types: state.types.list
+    languages: state.languages,
+    types: state.types
   }
 }
 
