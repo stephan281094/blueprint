@@ -24,8 +24,9 @@ const initialState = {
 const typeReducer = (state = initialState, action) => {
   switch (action.type) {
     case TYPE_SET_OPTION:
-      console.log('setting type option')
-      return state
+      return Object.assign({}, state, {
+        selected: action.key
+      })
     default:
       return state
   }

@@ -19,6 +19,7 @@ export function setLanguageOption (key) {
 
 // Initial State
 const initialState = {
+  selected: null,
   current: null,
   list: [
     { key: 'php', value: 'PHP' },
@@ -37,8 +38,9 @@ const languageReducer = (state = initialState, action) => {
         })[0]
       })
     case LANGUAGE_SET_OPTION:
-      console.log('setting language')
-      return state
+      return Object.assign({}, state, {
+        selected: action.key
+      })
     default:
       return state
   }
