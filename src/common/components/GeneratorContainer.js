@@ -3,7 +3,13 @@ import Select from './Select'
 
 class GeneratorContainer extends Component {
   render () {
-    const { languages, types, handleSubmit, handleChange } = this.props
+    const {
+      languages,
+      types,
+      handleSubmit,
+      setLanguageOption,
+      setTypeOption
+    } = this.props
 
     return (
       <div className='generator-container'>
@@ -13,8 +19,8 @@ class GeneratorContainer extends Component {
           </div>
           <div className='generator-settings'>
             <form onSubmit={handleSubmit}>
-              <Select handleChange={handleChange} options={languages} />
-              <Select handleChange={handleChange} options={types} />
+              <Select handleChange={setLanguageOption} options={languages} />
+              <Select handleChange={setTypeOption} options={types} />
               <button type='submit'>Continue</button>
             </form>
           </div>

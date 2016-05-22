@@ -1,7 +1,10 @@
 import React, { Component } from 'react'
+import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import GeneratorContainer from '../components/GeneratorContainer'
 import Popular from '../components/Popular'
+import { setLanguageOption } from '../reducers/language'
+import { setTypeOption } from '../reducers/types'
 
 class Home extends Component {
   handleSubmit (event) {
@@ -9,9 +12,12 @@ class Home extends Component {
     console.log('submitting the form')
   }
 
-  handleChange (event) {
-    event.preventDefault()
-    console.log('Changing the generator options')
+  setLanguageOption (event) {
+    this.props.setLanguageOption(event.target.value)
+  }
+
+  setTypeOption (event) {
+    this.props.setTypeOption(event.target.value)
   }
 
   render () {
@@ -19,8 +25,12 @@ class Home extends Component {
 
     return (
       <main>
-        <GeneratorContainer languages={languages} types={types}
-          handleSubmit={this.handleSubmit} handleChange={this.handleChange} />
+        <GeneratorContainer
+          languages={languages}
+          types={types}
+          handleSubmit={this.handleSubmit}
+          setLanguageOption={this.setLanguageOption.bind(this)}
+          setTypeOption={this.setTypeOption.bind(this)} />
         <Popular />
       </main>
     )
@@ -34,4 +44,11 @@ const mapStateToProps = (state) => {
   }
 }
 
-export default connect(mapStateToProps)(Home)
+const mapDispatchToProps = (dispatch) => {
+  return bindActionCreators({
+    setLanguageOption,
+    setTypeOption
+  }, dispatch)
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Home)

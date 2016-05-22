@@ -1,10 +1,18 @@
 // Constants
 export const LANGUAGES_FILTERED_BY_KEY = 'LANGUAGES_FILTERED_BY_KEY'
+export const LANGUAGE_SET_OPTION = 'LANGUAGE_SET_OPTION'
 
 // Actions
 export function getLanguagesByKey (key) {
   return {
     type: LANGUAGES_FILTERED_BY_KEY,
+    key
+  }
+}
+
+export function setLanguageOption (key) {
+  return {
+    type: LANGUAGE_SET_OPTION,
     key
   }
 }
@@ -28,6 +36,9 @@ const languageReducer = (state = initialState, action) => {
           return lang.key === action.key
         })[0]
       })
+    case LANGUAGE_SET_OPTION:
+      console.log('setting language')
+      return state
     default:
       return state
   }
