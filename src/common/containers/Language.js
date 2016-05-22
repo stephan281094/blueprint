@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 
-import { getLanguagesByKey } from '../reducers/language'
+import { getLanguagesByKey } from '../reducers/languages'
 
 class Language extends Component {
   componentDidMount () {

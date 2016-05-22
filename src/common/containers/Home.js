@@ -3,7 +3,7 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import GeneratorContainer from '../components/GeneratorContainer'
 import Popular from '../components/Popular'
-import { setLanguageOption } from '../reducers/language'
+import { setLanguageOption } from '../reducers/languages'
 import { setTypeOption } from '../reducers/types'
 
 class Home extends Component {
@@ -39,7 +39,7 @@ class Home extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    languages: state.language.list,
+    languages: state.languages.list,
     types: state.types.list
   }
 }
