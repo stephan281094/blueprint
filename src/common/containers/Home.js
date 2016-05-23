@@ -7,9 +7,17 @@ import { setLanguageOption } from '../reducers/languages'
 import { setTypeOption } from '../reducers/types'
 
 class Home extends Component {
+  static contextTypes = {
+    router: React.PropTypes.object.isRequired
+  }
+
   handleSubmit (event) {
     event.preventDefault()
-    console.log('submitting the form')
+
+    const { languages, types } = this.props
+    if (languages.selected && types.selected) {
+      this.context.router.push(`/${languages.selected}/${types.selected}/new`)
+    }
   }
 
   setLanguageOption (event) {

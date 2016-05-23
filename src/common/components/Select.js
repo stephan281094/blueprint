@@ -5,7 +5,7 @@ class Select extends Component {
     const { options, handleChange } = this.props
 
     const optionValues   = options.list
-    const selectedOption = options.selected
+    const selectedOption = options.selected || ''
 
     return (
       <select onChange={handleChange} value={selectedOption}>
