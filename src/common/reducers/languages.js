@@ -19,7 +19,7 @@ export function setLanguageOption (key) {
 
 // Initial State
 const initialState = {
-  selected: null,
+  selected: 'php',
   current: null,
   list: [
     { key: 'php', value: 'PHP' },

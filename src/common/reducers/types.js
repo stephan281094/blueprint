@@ -11,7 +11,7 @@ export function setTypeOption (key) {
 
 // Initial State
 const initialState = {
-  selected: null,
+  selected: 'model',
   current: null,
   list: [
     { key: 'model', value: 'Model' },

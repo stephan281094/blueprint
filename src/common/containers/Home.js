@@ -16,7 +16,7 @@ class Home extends Component {
 
     const { languages, types } = this.props
     if (languages.selected && types.selected) {
-      this.context.router.push(`/${languages.selected}/${types.selected}/new`)
+      this.context.router.push(`/${languages.selected}/${types.selected}/generate`)
     }
   }
 
