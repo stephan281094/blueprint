@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 
 import { getLanguagesByKey } from '../reducers/languages'
+import NotFound from './NotFound'
 
 class Language extends Component {
   componentDidMount () {
@@ -21,14 +22,9 @@ class Language extends Component {
           <p>Showcasing all blueprints created for {language.value}</p>
         </div>
       )
-    } else {
-      return (
-        <div>
-          <h1>Language Page</h1>
-          <p>Showcasing all blueprints created for a specific language</p>
-        </div>
-      )
     }
+
+    return <NotFound />
   }
 }
 
@@ -40,7 +36,7 @@ const mapDispatchToProps = (dispatch) => {
 
 const mapStateToProps = (state) => {
   return {
-    language: state.language.current
+    language: state.languages.current
   }
 }
 
