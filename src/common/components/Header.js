@@ -5,11 +5,8 @@ class Header extends Component {
   render () {
     return (
       <header className='app-header'>
-        <div className='app-header-left'></div>
-        <Link className='app-header-link app-logo' to='/'>Blueprint</Link>
-        <div className='app-header-right'>
-          <Link className='app-header-link' to='/profile'>You</Link>
-        </div>
+        <Link className='app-header-logo app-header-link' to='/'>Blueprint</Link>
+        <Link className='app-header-menu app-header-link' to='/profile'>You</Link>
       </header>
     )
   }

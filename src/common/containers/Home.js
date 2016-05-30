@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
+import { Link } from 'react-router'
+
 import GeneratorContainer from '../components/GeneratorContainer'
 import Popular from '../components/Popular'
 import { setLanguageOption } from '../reducers/languages'
@@ -33,13 +35,16 @@ class Home extends Component {
 
     return (
       <main>
-        <GeneratorContainer
+        {/*<GeneratorContainer
           languages={languages}
           types={types}
           handleSubmit={this.handleSubmit.bind(this)}
           setLanguageOption={this.setLanguageOption.bind(this)}
           setTypeOption={this.setTypeOption.bind(this)} />
-        <Popular />
+        */}
+        <h1 className='title'>Blueprints</h1>
+        <span className='title-sub'>
+          You have 0 blueprints. Create a <Link to='/new'>new</Link> one.</span>
       </main>
     )
   }

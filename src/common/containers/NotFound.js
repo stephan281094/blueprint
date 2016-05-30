@@ -3,10 +3,12 @@ import React, { Component } from 'react'
 class NotFound extends Component {
   render () {
     return (
-      <div>
-        <h1>Ooops!</h1>
-        <p>The page you requested for could not be found.</p>
-      </div>
+      <main>
+        <h1 className='title'>Oops!</h1>
+        <span className='title-sub'>
+          The page you requested for could not be found.
+        </span>
+      </main>
     )
   }
 }

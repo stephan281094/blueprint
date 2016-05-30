@@ -17,10 +17,12 @@ class Language extends Component {
 
     if (language) {
       return (
-        <div>
-          <h1>Language: {language.value}</h1>
-          <p>Showcasing all blueprints created for {language.value}</p>
-        </div>
+        <main>
+          <h1 className='title'>Language: {language.value}</h1>
+          <span className='title-sub'>
+            Showcasing all blueprints created for {language.value}.
+          </span>
+        </main>
       )
     }
 
