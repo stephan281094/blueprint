@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import { Link } from 'react-router'
+import Modal from 'react-modal'
 
 import GeneratorContainer from '../components/GeneratorContainer'
 import Popular from '../components/Popular'
@@ -31,7 +32,7 @@ class Home extends Component {
   }
 
   render () {
-    const { languages, types } = this.props
+    const { languages, types, route } = this.props
 
     return (
       <main>
@@ -42,6 +43,10 @@ class Home extends Component {
           setLanguageOption={this.setLanguageOption.bind(this)}
           setTypeOption={this.setTypeOption.bind(this)} />
         */}
+        <Modal isOpen={route.openModal}>
+          <h1>Modal Content</h1>
+          <p>Etc.</p>
+        </Modal>
         <h1 className='title'>Blueprints</h1>
         <span className='title-sub'>
           You have 0 blueprints. Create a <Link to='/new'>new</Link> one.</span>
