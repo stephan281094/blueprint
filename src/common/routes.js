@@ -12,7 +12,6 @@ import NotFound from './containers/NotFound'
 const routes = (
   <Route path='/' component={App} >
     <IndexRoute component={Home} />
-    <Route path='new' component={Home} openModal={true} />
     <Route path=':language' component={Language} />
     <Route path=':language/:type' component={LanguageFiltered} />
     <Route path=':language/:type/generate' component={GenerateBlueprint} />
