@@ -7,5 +7,10 @@ After logging into blueprint, you can create 'blueprints', which essentially are
 
 Blueprints can be shared publicly, this enables other developers to use the exact same boilerplate code, encouraging a consistent way of writing code in your project!
 
+## Setup
+* `npm i`
+* `npm start`
+* `open http://localhost:3000`
+
 ## License
 MIT
