@@ -28,6 +28,29 @@
   display: flex;
 }
 
+.modal__button {
+  margin-top: 1rem;
+  width: 60px;
+  height: 60px;
+  border: 0;
+  border-radius: 50%;
+  background-color: transparent;
+  /*box-shadow: inset 0 0 0 1px #aaa;*/
+  cursor: pointer;
+}
+
+.modal__button:active {
+  /*box-shadow: inset 0 0 0 1px #000;*/
+}
+
+.modal__button__icon {
+  fill: #aaa;
+}
+
+.modal__button:active .modal__button__icon {
+  fill: #000;
+}
+
 @keyframes bounceIn {
   from, 60%, to {
     animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);

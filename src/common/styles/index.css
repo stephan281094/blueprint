@@ -16,3 +16,9 @@
   line-height: 1.5;
   color: #7e899b;
 }
+
+.new-blueprint-modal,
+.new-blueprint-modal form {
+  display: flex;
+  flex-direction: column;
+}
