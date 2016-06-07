@@ -47,13 +47,6 @@ class Home extends Component {
 
     return (
       <main>
-        {/*<GeneratorContainer
-          languages={languages}
-          types={types}
-          handleSubmit={this.handleSubmit.bind(this)}
-          setLanguageOption={this.setLanguageOption.bind(this)}
-          setTypeOption={this.setTypeOption.bind(this)} />
-        */}
         <Modal
           isOpen={app.showModal}
           onRequestClose={this.closeModal.bind(this)}

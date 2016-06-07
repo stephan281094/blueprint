@@ -35,19 +35,14 @@
   border: 0;
   border-radius: 50%;
   background-color: transparent;
-  /*box-shadow: inset 0 0 0 1px #aaa;*/
   cursor: pointer;
-}
-
-.modal__button:active {
-  /*box-shadow: inset 0 0 0 1px #000;*/
 }
 
 .modal__button__icon {
   fill: #aaa;
 }
 
-.modal__button:active .modal__button__icon {
+.modal__button:hover .modal__button__icon {
   fill: #000;
 }
 
